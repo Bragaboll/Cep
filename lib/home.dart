@@ -13,9 +13,9 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   TextEditingController txtcep = TextEditingController();
-  final _formkey = GlobalKey<FormState>();
-
-  Future<dynamic> buscaCep() async {
+  final _formkey = GlobalKey<FormState>(); 
+ 
+   Future<dynamic> buscaCep() async {
     dynamic cep = txtcep.text;
     var url = Uri.parse('http://viacep.com.br/ws/$cep/json/');
     http.Response response;
@@ -27,6 +27,7 @@ class _HomeState extends State<Home> {
         const snackBar = SnackBar(
           content: Text('Cep Inválido'),
         );
+        // ignore: use_build_context_synchronously
         ScaffoldMessenger.of(context).showSnackBar(snackBar);
       } else {
         String logradouro = dados['logradouro'];
@@ -43,6 +44,7 @@ class _HomeState extends State<Home> {
       }
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -106,9 +108,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 30,
-              ),
+             
             ],
           ),
         ),
@@ -116,3 +116,4 @@ class _HomeState extends State<Home> {
     );
   }
 }
+

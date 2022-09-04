@@ -48,7 +48,7 @@ class _ResultadoState extends State<Resultado> {
                       'Voltar',
                       style: TextStyle(
                           fontSize: 25,
-                          color: Colors.red,
+                          color: Colors.blue,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
