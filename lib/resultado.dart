@@ -42,19 +42,15 @@ class _ResultadoState extends State<Resultado> {
             padding: const EdgeInsets.all(10),
             child: Column(
               children: [
-                ListTile(
-                  title: const Center(
-                    child: Text(
-                      'Voltar',
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  onTap: () {
-                    Navigator.of(context).pop('/');
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop('/home');
                   },
+                  child: const Text(
+                    'Voltar',
+                    style: TextStyle(fontSize: 22),
+                  ),
+                 
                 ),
               ],
             ),
